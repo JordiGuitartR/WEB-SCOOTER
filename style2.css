@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(243, 243, 243);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    z-index: +1;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: rgb(46, 46, 46);
+}
+
+.title {
+    min-height: 300px;
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(46, 46, 46, 0.537);
+
+
+}
+
+h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 10vw;
+}
+
+.video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+nav {
+    text-align: center;
+    padding: 30px;
+}
+
+ul {
+    justify-content: flex-end;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.tag {
+    background-color: rgb(46, 46, 46);
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    padding: 25px 50px;
+
+}
+
+li {
+    border-left: solid rgba(199, 199, 199, 0.899)3px;
+}
+
+li:nth-child(2){
+    border-left: solid white;
+}
+
+li:nth-child(2) a{
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a {
+    font-size: 1.1em;
+    color: rgba(199, 199, 199, 0.899);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+.seccio {
+    background-color: rgb(237, 237, 237);
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.title2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+
+}
+
+.article {
+    text-align: center;
+    margin: 40px 70px;
+
+}
+
+.seccio .contenidor {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.seccio .imatge {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.seccio .contenidor:hover .imatge {
+    transform: rotateY(180deg);
+
+}
+
+.seccio .imatge img {
+    border-radius: 20%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.seccio .darrere {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.seccio .darrere p {
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    margin: 30px;
+    line-height: 25px;
+}
+
+
+footer {
+    background-color: rgb(46, 46, 46);
+    padding: 45px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.05em;
+    color: white;
+    gap: 20px;
+}
+
+.social {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+}
+
+
+/* a partir d'aquesta mida és necessari aplicar JS per plegar el navbar i posar un icona burger*/
+@media only screen and (max-width: 700px) {
+
+    h1 {
+        font-size: 17.5vw;
+    }
+
+    .title2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
+
+    .p {
+        color: rgb(20, 20, 20);
+        flex: 1;
+    }
+
+    .p p {
+        font-size: 1.05em;
+        line-height: 30px;
+    }
+
+
+    li {
+        border-left: solid rgba(199, 199, 199, 0) 2px;
+    }
+
+    a:hover {
+        color: rgba(255, 255, 255, 0);
+        transition: all 0.5s;
+
+    }
+
+    a {
+        color: rgba(199, 199, 199, 0);
+        font-weight: bold;
+        text-decoration: none;
+        margin: 10px;
+    }
+
+    li:nth-child(2) a{
+        color: rgba(255, 255, 255, 0);
+    }
+    
+    li:nth-child(2){
+        border-left: solid rgba(255, 255, 255, 0);
+    }
+
+    footer span {
+        margin-top: 2.5px;
+        font-size: 0.9em;
+    }
+
+}
