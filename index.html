@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <header>
+
         <div class="tag">JGR</div>
         <nav>
-            <ul>
+            <ul class="navbar">
+                <li><a href="index.html">INICI</a></li>
+                <li><a href="index2.html">COMPONENTS</a></li>
+                <li><a href="index3.html">EMPRESES</a></li>
+                <li><a href="index4.html">EDITS</a></li>
+            </ul>
+            <ul class="vertical-navbar">
                 <li><a href="index.html">INICI</a></li>
                 <li><a href="index2.html">COMPONENTS</a></li>
                 <li><a href="index3.html">EMPRESES</a></li>
                 <li><a href="index4.html">EDITS</a></li>
             </ul>
         </nav>
+
+        <div class="burger-icon" onclick=toggleNav()>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
 
     </header>
 

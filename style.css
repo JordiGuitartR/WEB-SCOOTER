@@ -167,8 +167,70 @@ footer {
 }
 
 
-/* a partir d'aquesta mida és necessari aplicar JS per plegar el navbar i posar un icona burger*/
+.burger-icon-hidden {
+    display: none;
+}
+
+
+.vertical-navbar {
+    display: none;
+}
+
+
+
 @media only screen and (max-width: 700px) {
+
+    .burger-icon {
+        display: flex;
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: +1;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .vertical-navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(46, 46, 46);
+        position: relative;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: +1;
+    }
+
+    .vertical-navbar a {
+        color: rgba(199, 199, 199, 0.899);
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    .tag{
+        padding: 0;
+        margin: 15px 50px;
+        z-index: +2;
+    } 
 
     h1 {
         font-size: 17.5vw;
@@ -193,32 +255,6 @@ footer {
     .p p {
         font-size: 1.05em;
         line-height: 30px;
-    }
-
-
-    li {
-        border-left: solid rgba(199, 199, 199, 0) 2px;
-    }
-
-    a:hover {
-        color: rgba(255, 255, 255, 0);
-        transition: all 0.5s;
-
-    }
-
-    a {
-        color: rgba(199, 199, 199, 0);
-        font-weight: bold;
-        text-decoration: none;
-        margin: 10px;
-    }
-
-    li:nth-child(1) a {
-        color: rgba(255, 255, 255, 0);
-    }
-
-    li:nth-child(1) {
-        border-left: solid rgba(255, 255, 255, 0);
     }
 
     footer span {
